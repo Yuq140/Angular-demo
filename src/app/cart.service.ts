@@ -12,7 +12,7 @@ export class CartService {
   }
 
   getItems() {
-    return this.items;
+    return this.items.sort((a, b) => (a.price < b.price ? -1 : 1));
   }
 
   clearCart() {
